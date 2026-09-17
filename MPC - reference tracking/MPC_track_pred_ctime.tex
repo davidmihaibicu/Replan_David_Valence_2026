@@ -1,0 +1,38 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.951\textwidth,
+height=0.602\textwidth,
+at={(0\textwidth,0\textwidth)},
+scale only axis,
+xmin=20,
+xmax=200,
+xlabel style={font=\color{mycolor1}},
+xlabel={$N_{pred}$},
+ymin=0,
+ymax=450,
+ylabel style={font=\color{mycolor1}},
+ylabel={Computed time (s)},
+axis background/.style={fill=white},
+title style={font=\bfseries\color{mycolor1}},
+title={Online computation vs prediction horizon},
+xmajorgrids,
+ymajorgrids
+]
+\addplot [color=blue, dotted, mark=o, mark options={solid, blue}, forget plot]
+  table[row sep=crcr]{%
+20	47.312593\\
+50	90.4660709\\
+100	188.2344536\\
+200	438.8093223\\
+};
+\end{axis}
+\end{tikzpicture}%
